@@ -19,6 +19,8 @@ const authService = {
   sessions: () => api.get(endpoints.auth.sessions),
   revokeSession: (id) => api.post(`${endpoints.auth.sessions}${id}/revoke/`),
   users: () => api.get(endpoints.auth.users),
+  updateUser: (id, payload) => api.patch(`${endpoints.auth.users}${id}/`, payload),
+  toggleUserActive: (id) => api.post(`${endpoints.auth.users}${id}/toggle_active/`),
 };
 
 export default authService;

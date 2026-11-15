@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import LoginPage from "../modules/autenticacion/pages/LoginPage";
 import ProfilePage from "../modules/autenticacion/pages/ProfilePage";
+import UsersPage from "../modules/autenticacion/pages/UsersPage";
 import DashboardPage from "../modules/reportes/pages/DashboardPage";
 import ReportsPage from "../modules/reportes/pages/ReportsPage";
 import CropsPage from "../modules/cultivos/pages/CropsPage";
@@ -83,6 +84,7 @@ function SessionRoutes() {
         <Route path="/disuasion" element={<DisuasionPage />} />
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/users" element={<UsersPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
